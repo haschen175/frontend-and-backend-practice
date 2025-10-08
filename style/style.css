@@ -186,7 +186,7 @@ margin-top: 50px; /* Отступ сверху */
 }
 /* ===== СЕКЦИЯ ТОВАРОВ ===== */
 
-.products-grid {
+.products {
    display: flex;
    justify-content: center;
    gap: 30px;
