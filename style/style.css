@@ -189,42 +189,42 @@ margin-top: 50px; /* Отступ сверху */
 .products-grid {
    display: flex;
    justify-content: center;
-   gap: 30px; /* Расстояние между карточками */
-   flex-wrap: wrap; /* Перенос на новую строку при уменьшении экрана */
+   gap: 30px;
+   flex-wrap: wrap;
    margin-top: 30px;
 }
 
 .product-card {
-   background: white; /* Белый фон карточки */
-   padding: 20px; /* Внутренние отступы */
-   border-radius: 12px; /* Скругленные углы */
-   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1); /* Тень */
-   text-align: center; /* Центрирование содержимого */
-   width: 200px; /* Фиксированная ширина карточки */
-   transition: transform 0.3s ease; /* Плавная анимация при наведении */
+   background: white;
+   padding: 20px;
+   border-radius: 12px;
+   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+   text-align: center;
+   width: 200px;
+   transition: transform 0.3s ease; 
 }
 
 .product-card:hover {
-   transform: translateY(-5px); /* Поднятие карточки при наведении */
-   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15); /* Увеличенная тень при наведении */
+   transform: translateY(-5px);
+   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 }
 
 .product-card img {
-   width: 100%; /* Изображение занимает всю ширину карточки */
-   height: auto; /* Автоматическая высота для сохранения пропорций */
-   border-radius: 8px; /* Скругление углов изображения */
-   margin-bottom: 15px; /* Отступ снизу от изображения */
+   width: 100%;
+   height: auto;
+   border-radius: 8px;
+   margin-bottom: 15px;
 }
 
 .product-name {
    font-size: 18px;
    font-weight: 600;
-   margin: 10px 0 5px 0; /* Вертикальные отступы */
+   margin: 10px 0 5px 0;
 }
 
 .product-price {
-   color: #e74c3c; /* Красный цвет для цены (как на скриншоте) */
+   color: #e74c3c;
    font-size: 16px;
    font-weight: 500;
-   margin: 5px 0 0 0; /* Вертикальные отступы */
+   margin: 5px 0 0 0;
 }
