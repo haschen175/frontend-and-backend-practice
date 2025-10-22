@@ -21,16 +21,22 @@
             </ul>
         </nav>
         <main class="content"> <!-- Основной контент -->
-             <h1 class="profile-title">Контактная Информация</h1> <!-- Заголовок страницы -->
-             <div class="contacts-container"> <!-- Контейнер для контактов -->
+             <h1 class="profile-title">Контактная Информация</h1> <!-- Заголовок как на скриншоте -->
+
+             <!-- Контейнер для контактов (используем класс .contacts-container из styles.css) -->
+             <div class="contacts-container">
+                 <!-- Карточка с email (используем класс .contact-info из styles.css) -->
                  <div class="contact-info">
-                     <p>Электронная почта: <a href="mailto:myemail@example.com">myemail@example.com</a></p>
+                     <p>Адрес электронной почты: <a href="mailto:myemail@example.com">myemail@example.com</a></p>
                  </div>
+                 <!-- Карточка с адресом (используем класс .contact-info из styles.css) -->
                  <div class="contact-info">
-                     <p>Адрес: 123456, Москва, улица Примерная, д. 1</p>
+                     <p>Адрес: г. Москва, ул. Пушкина, д. 12</p>
                  </div>
-                 <button class="contact-button" onclick="alert('Позвоните мне!')">Позвоните мне</button> <!-- Используем новый класс для кнопки -->
+                 <!-- Кнопка (используем класс .contact-button из styles.css) -->
+                 <button class="contact-button" onclick="alert('Позвоните мне!')">Позвоните мне</button>
              </div>
+
         </main>
         <footer class="footer">
             <p>Футер</p>
