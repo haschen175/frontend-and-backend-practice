@@ -1,0 +1,54 @@
+                 <article class="news-card">
+                     <h2 class="news-title">В Кремле рассказали о подготовке саммита Путина и Трампа в Венгрии.</h2>
+                     <p class="news-meta">Дата публикации: 22.10.2025 | Автор: Иванов И.И.</p>
+                     <p class="news-text">Песков: сроки встречи Путина и Трампа еще предстоит определить.</p>
+                 </article>
+                 <!-- Карточка новости 2 -->
+                 <article class="news-card">
+                     <h2 class="news-title">ВС России нанесли массированный удар по украинским энергообъектам.</h2>
+                     <p class="news-meta">Дата публикации: 22.10.2025 | Автор: Петров П.П.</p>
+                     <p class="news-text">ВС России нанесли массированный удар "Кинжалами" по энергообъектам Украины.</p>
+                 </article>
+                 <!-- Карточка новости 3 -->
+                 <article class="news-card">
+                     <h2 class="news-title">Европарламент одобрил переговоры о запрете российских энергоресурсов.</h2>
+                     <p class="news-meta">Дата публикации: 22.10.2025 | Автор: Сидоров С.С.</p>
+                     <p class="news-text">ЕС хочет запретить импорт российского газа и нефти с 1 января 2028 года.</p>
+
+
+
+
+                     <section class="about-me"><!-- Было: <div class="about-me">-->
+                <h2>Обо мне</h2><!-- Добавили заголовок для семантики-->
+                <p>Обо мне: Родился в Москве в 2006 году. Обучаюсь в РТУ МИРЭА</p>
+            </section>
+            <section class="skills-container"><!-- Было: <div class="skills-container">-->
+                <h2>Мои навыки</h2><!-- Добавили заголовок для семантики-->
+                <div class="skills-grid"><!-- Обертка для Grid-->
+                    <div class="skill-tag">CSS</div>
+                    <div class="skill-tag">HTML</div>
+                    <div class="skill-tag">python</div>
+                    <div class="skill-tag">JS</div>
+                </div>
+            </section>
+            <section class="experience-section"><!-- Было: <div class="experience-section">-->
+                <h2 class="section-title">Мой опыт работы</h2>
+                <div class="experience-grid"><!-- Обертка для Grid-->
+                    <article class="experience-card"><!-- Было: <div class="experience-card">-->
+                        <h3 class="experience-title">Верстка</h3>
+                        <p class="experience-desc">Писал сайты на заказ</p>
+                    </article>
+                    <article class="experience-card">
+                        <h3 class="experience-title">Скрипты</h3>
+                        <p class="experience-desc">Делал скрипты</p>
+                    </article>
+                    <article class="experience-card">
+                        <h3 class="experience-title">Бэкенд</h3>
+                        <p class="experience-desc">Выполнял простейшие задания по бэкенду.</p>
+                    </article>
+                </div>
+            </section>
+
+
+            
+            <img class="product-image" src="../images/goods1.jpg" alt="Товар 1" width="200" height="250">

@@ -3,65 +3,136 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Семестровая работа</title>
+    <title>Главная - Портфолио</title>
     <link rel="stylesheet" href="style/style.css">
 </head>
 <body>
-    <!-- Изменение: Заменили div на семантические теги-->
-    <div class="page-container">
-        <header class="header"><!-- Было: <div class="header">-->
-            <h1>Хэдер</h1><!-- Добавили заголовок для семантики-->
+    <!-- Основной контейнер -->
+    <div class="page">
+        <!-- Шапка -->
+        <header class="header">
+            <h1 class="header__title">Моё портфолио</h1>
         </header>
-        <nav class="nav"><!-- Было: <div class="nav">-->
-            <ul class="nav-list">
-                <li class="nav-item"><a class="nav-link" href="index.html">Главная</a></li>
-                <li class="nav-item"><a class="nav-link" href="pages/news.html">Новости</a></li>
-                <li class="nav-item"><a class="nav-link" href="pages/practices.html">Практики</a></li>
-                <li class="nav-item"><a class="nav-link" href="pages/goods.html">Товары</a></li>
-                <li class="nav-item"><a class="nav-link" href="pages/contacts.html">Контакты</a></li>
+        <!-- Навигация -->
+        <nav class="nav">
+            <ul class="nav__list">
+                <li class="nav__item nav__item--active">
+                    <a class="nav__link" href="index.html">Главная</a>
+                </li>
+                <li class="nav__item">
+                    <a class="nav__link" href="pages/news.html">Новости</a>
+                </li>
+                <li class="nav__item">
+                    <a class="nav__link" href="pages/goods.html">Товары</a>
+                </li>
+                <li class="nav__item">
+                    <a class="nav__link" href="pages/practices.html">Практики</a>
+                </li>
+                <li class="nav__item">
+                    <a class="nav__link" href="pages/contacts.html">Контакты</a>
+                </li>
             </ul>
         </nav>
-        <main class="content"><!-- Было: <div class="content">-->
-            <article class="profile-header"><!-- Было: <div class="profile-header">-->
-                <h1 class="profile-title">Информация об авторе</h1>
-                <img class="profile-photo" src="images/photo.jpg" alt="Фото автора">
-                <h2 class="profile-name">Стоянов Антон Дмитриевич</h2>
-                <p class="profile-group">ЭФБО-13-24</p>
-            </article>
-            <section class="about-me"><!-- Было: <div class="about-me">-->
-                <h2>Обо мне</h2><!-- Добавили заголовок для семантики-->
-                <p>Обо мне: Родился в Москве в 2006 году. Обучаюсь в РТУ МИРЭА</p>
-            </section>
-            <section class="skills-container"><!-- Было: <div class="skills-container">-->
-                <h2>Мои навыки</h2><!-- Добавили заголовок для семантики-->
-                <div class="skills-grid"><!-- Обертка для Grid-->
-                    <div class="skill-tag">CSS</div>
-                    <div class="skill-tag">HTML</div>
-                    <div class="skill-tag">python</div>
-                    <div class="skill-tag">JS</div>
+        <!-- Основной контент -->
+        <main class="main">
+            <!-- Профиль -->
+            <section class="profile">
+                <div class="profile__card">
+                    <img class="profile__photo" src="images/photo.jpg" alt="Фото">
+                    <div class="profile__info">
+                        <h2 class="profile__name">Стоянов Антон Дмитриевич</h2>
+                        <p class="profile__group">ЭФБО-13-24</p>
+                    </div>
                 </div>
             </section>
-            <section class="experience-section"><!-- Было: <div class="experience-section">-->
-                <h2 class="section-title">Мой опыт работы</h2>
-                <div class="experience-grid"><!-- Обертка для Grid-->
-                    <article class="experience-card"><!-- Было: <div class="experience-card">-->
-                        <h3 class="experience-title">Верстка</h3>
-                        <p class="experience-desc">Писал сайты на заказ</p>
-                    </article>
-                    <article class="experience-card">
-                        <h3 class="experience-title">Скрипты</h3>
-                        <p class="experience-desc">Делал скрипты</p>
-                    </article>
-                    <article class="experience-card">
-                        <h3 class="experience-title">Бэкенд</h3>
-                        <p class="experience-desc">Выполнял простейшие задания по бэкенду.</p>
-                    </article>
+            <!-- Обо мне -->
+            <section class="about">
+                <h2 class="about__title">Обо мне</h2>
+                <div class="about__content">
+                    <p class="about__text">
+                        Родился в Москве в 2006 году. Обучаюсь в РТУ МИРЭА.
+                    </p>
+                </div>
+            </section>
+            <!-- Навыки -->
+            <section class="skills">
+                <h2 class="skills__title">Мои навыки</h2>
+                <div class="skills__list">
+                    <div class="skill skill--html">
+                        <span class="skill__name">HTML</span>
+                    </div>
+                    <div class="skill skill--css">
+                        <span class="skill__name">CSS</span>
+                    </div>
+                    <div class="skill skill--js">
+                        <span class="skill__name">JavaScript</span>
+                    </div>
+                    <!-- Добавьте другие навыки по необходимости, используя модификаторы -->
+                    <div class="skill skill--python">
+                        <span class="skill__name">Python</span>
+                    </div>
+                </div>
+            </section>
+            <!-- Проекты -->
+            <section class="projects">
+                <h2 class="projects__title">Проекты</h2>
+                <div class="projects__grid">
+                    <div class="project-card">
+                        <h3 class="project-card__title">Личный сайт</h3>
+                        <p class="project-card__desc">Сайт-портфолио на HTML и CSS</p>
+                    </div>
+                    <div class="project-card">
+                        <h3 class="project-card__title">Todo приложение</h3>
+                        <p class="project-card__desc">Простое приложение для задач</p>
+                    </div>
+                    <!-- Добавьте другие проекты по необходимости -->
+                    <div class="project-card">
+                        <h3 class="project-card__title">Скрипты</h3>
+                        <p class="project-card__desc">Писал простейшие скрипты.</p>
+                    </div>
                 </div>
             </section>
         </main>
-        <footer class="footer"><!-- Было: <div class="footer">-->
-            <p>Футер</p><!-- Добавили параграф для семантики-->
+        <!-- Подвал -->
+        <footer class="footer">
+            <p class="footer__text">&copy; 2025 Мой сайт</p>
         </footer>
     </div>
+        <!-- ... (ваш HTML до закрывающего </body>) ... -->
+
+    <!-- Кнопка переключения темы -->
+    <button class="theme-toggle" id="themeToggle" aria-label="Переключить тему">🌙</button>
+
+    <script>
+        // Функция переключения темы
+        function toggleTheme() {
+            const htmlElement = document.documentElement;
+            const currentTheme = htmlElement.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            htmlElement.setAttribute('data-theme', newTheme);
+
+            // Сохраняем предпочтение пользователя в localStorage
+            localStorage.setItem('theme', newTheme);
+
+            // Обновляем иконку кнопки
+            const themeToggleBtn = document.getElementById('themeToggle');
+            themeToggleBtn.textContent = newTheme === 'dark' ? '☀️' : '🌙';
+            themeToggleBtn.setAttribute('aria-label', `Текущая тема: ${newTheme === 'dark' ? 'Тёмная' : 'Светлая'}`);
+        }
+
+        // Инициализация темы при загрузке страницы
+        document.addEventListener('DOMContentLoaded', function() {
+            const savedTheme = localStorage.getItem('theme') || 'light'; // По умолчанию светлая
+            document.documentElement.setAttribute('data-theme', savedTheme);
+
+            // Обновляем иконку кнопки при загрузке
+            const themeToggleBtn = document.getElementById('themeToggle');
+            themeToggleBtn.textContent = savedTheme === 'dark' ? '☀️' : '🌙';
+            themeToggleBtn.setAttribute('aria-label', `Текущая тема: ${savedTheme === 'dark' ? 'Тёмная' : 'Светлая'}`);
+
+            // Добавляем обработчик события на кнопку
+            themeToggleBtn.addEventListener('click', toggleTheme);
+        });
+    </script>
 </body>
 </html>
