@@ -4,12 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Контакты</title>
-    <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="../style/style.css"> <!-- Подключение CSS -->
 </head>
 <body>
-    <div class="page-container">
-        <div class="header">Хэдер</div>
-        <div class="nav">
+    <div class="page-container"> <!-- Обёртка -->
+        <header class="header">
+            <h1>Хэдер</h1>
+        </header>
+        <nav class="nav">
             <ul class="nav-list">
                 <li class="nav-item"><a class="nav-link" href="../index.html">Главная</a></li>
                 <li class="nav-item"><a class="nav-link" href="news.html">Новости</a></li>
@@ -17,14 +19,22 @@
                 <li class="nav-item"><a class="nav-link" href="goods.html">Товары</a></li>
                 <li class="nav-item"><a class="nav-link" href="contacts.html">Контакты</a></li>
             </ul>
-        </div>
-        <div class="profile-header">
-             <h1 class="profile-title">Контактная Информация</h1>
-             <p class="about-me">Электронная почта: <a href="mailto:myemail@example.com">slfdsf@gmail.com</a></p>
-             <p class="about-me">Адрес: Г. Москва, улица ломывф, д. 1</p>
-             <button class="skill-tag" onclick="alert('Позвоните мне!')">Позвоните мне</button>
-        </div>
-        <div class="footer">Футер</div>
+        </nav>
+        <main class="content"> <!-- Основной контент -->
+             <h1 class="profile-title">Контактная Информация</h1> <!-- Заголовок страницы -->
+             <div class="contacts-container"> <!-- Контейнер для контактов -->
+                 <div class="contact-info">
+                     <p>Электронная почта: <a href="mailto:myemail@example.com">myemail@example.com</a></p>
+                 </div>
+                 <div class="contact-info">
+                     <p>Адрес: 123456, Москва, улица Примерная, д. 1</p>
+                 </div>
+                 <button class="contact-button" onclick="alert('Позвоните мне!')">Позвоните мне</button> <!-- Используем новый класс для кнопки -->
+             </div>
+        </main>
+        <footer class="footer">
+            <p>Футер</p>
+        </footer>
     </div>
 </body>
 </html>

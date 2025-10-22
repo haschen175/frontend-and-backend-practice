@@ -4,12 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Новости</title>
-    <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="../style/style.css"> <!-- Подключение CSS -->
 </head>
 <body>
-    <div class="page-container">
-        <div class="header">Хэдер</div>
-        <div class="nav">
+    <div class="page-container"> <!-- Обёртка -->
+        <header class="header">
+            <h1>Хэдер</h1>
+        </header>
+        <nav class="nav">
             <ul class="nav-list">
                 <li class="nav-item"><a class="nav-link" href="../index.html">Главная</a></li>
                 <li class="nav-item"><a class="nav-link" href="news.html">Новости</a></li>
@@ -17,27 +19,30 @@
                 <li class="nav-item"><a class="nav-link" href="goods.html">Товары</a></li>
                 <li class="nav-item"><a class="nav-link" href="contacts.html">Контакты</a></li>
             </ul>
-        </div>
-        <div class="content">
-             <h1 class="profile-title">Новости</h1>
-             <div class="experience-card">
-                 <h2 class="experience-title">В ХАМАС сообщили об обмене списками пленных с Израилем</h2>
-                 <p class="news-meta experience-desc">21.09.2024 | Автор: Стоянов А.С.</p>
-                 <p class="experience-desc">В ХАМАС сообщили об обмене списками пленных с Израилем в Шарм-эш-Шейхе.</p>
-             </div>
-             <div class="experience-card">
-                 <h2 class="experience-title">Импульс украинскому урегулированию оказался исчерпан, заявил Рябков</h2>
-                 <p class="news-meta experience-desc">20.09.2024 | Автор: Стоянов А.С.</p>
-                 <p class="experience-desc">Импульс, который придала украинскому урегулированию встреча президентов России и США на Аляске, 
-                    оказался исчерпан стараниями европейцев, заявил замглавы МИД Сергей Рябков..</p>
-             </div>
-             <div class="experience-card">
-                 <h2 class="experience-title">Поставки ракет Tomahawk Украине могут занять месяцы, пишут СМИ.</h2>
-                 <p class="news-meta experience-desc">19.09.2024 | Автор: Стоянов А.С.</p>
-                 <p class="experience-desc">Telegraph: Украина может получить ракеты Tomahawk без права на их применение.</p>
-             </div>
-        </div>
-        <div class="footer">Футер</div>
+        </nav>
+        <main class="content"> <!-- Основной контент -->
+            <h1 class="profile-title">Новости</h1> <!-- Заголовок страницы -->
+            <div class="news-container"> <!-- Контейнер для новостей -->
+                <article class="news-card"> <!-- Карточка новости -->
+                    <h2 class="news-title">Заголовок Новости 1</h2>
+                    <p class="news-meta">Дата публикации: 21.09.2024 | Автор: Иванов И.И.</p>
+                    <p class="news-text">Текст первой новости. Это может быть длинный или короткий абзац, описывающий суть новости.</p>
+                </article>
+                <article class="news-card">
+                    <h2 class="news-title">Заголовок Новости 2</h2>
+                    <p class="news-meta">Дата публикации: 20.09.2024 | Автор: Петров П.П.</p>
+                    <p class="news-text">Текст второй новости. Здесь рассказывается о другом событии или теме.</p>
+                </article>
+                <article class="news-card">
+                    <h2 class="news-title">Заголовок Новости 3</h2>
+                    <p class="news-meta">Дата публикации: 19.09.2024 | Автор: Сидоров С.С.</p>
+                    <p class="news-text">Текст третьей новости. Завершаем серию новостей на этой странице.</p>
+                </article>
+            </div>
+        </main>
+        <footer class="footer">
+            <p>Футер</p>
+        </footer>
     </div>
 </body>
 </html>
