@@ -1,19 +1,19 @@
 /* CSS переменные */
 :root {
     /* Цвета */
-    --color-main: #2c3e50;
-    --color-accent: #3498db;
+    --color-main: #6f767e;
+    --color-accent: #767f85;
     --color-light: #ecf0f1;
-    --color-dark: #34495e;
+    --color-dark: #55606b;
     --color-text: #2c3e50;
-    --color-white: #ffffff;
+    --color-white: #635e5e;
     --color-black: #000000;
     --color-success: #2ecc71;
     --color-error: #e74c3c;
     --color-gray: #95a5a6;
-    --color-bg-dark: #1a1a1a;
+    --color-bg-dark: #838181;
     --color-text-dark: #ecf0f1;
-    --color-accent-dark: #3498db;
+    --color-accent-dark: #939a9e;
 
     /* Тени */
     --shadow: 0 2px 5px rgba(0,0,0,0.1);
@@ -53,10 +53,10 @@
 
 /* Темная тема */
 [data-theme="dark"] {
-    --color-main: #a09a9a; /* Более светло-серый основной цвет */
-    --color-accent: #6c757d; /* Серо-нейтральный акцент */
+    --color-main: #aaa6a6; /* Более светло-серый основной цвет */
+    --color-accent: #929597; /* Серо-нейтральный акцент */
     --color-light: #343a40; /* Тёмно-серый для фона */
-    --color-dark: #7c7f81; /* Ещё темнее для контрастных элементов */
+    --color-dark: #212529; /* Ещё темнее для контрастных элементов */
     --color-text: #e9ecef; /* Светло-серый текст */
     --color-white: #2d2d2d; /* Тёмно-серый, имитирующий белый в тёмной теме */
     --color-black: #f8f9fa; /* Светлый, имитирующий чёрный в тёмной теме */
@@ -68,6 +68,7 @@
     --shadow-hover: 0 5px 15px rgba(0, 0, 0, 0.4);
     --shadow-modal: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
+
 
 /* Базовые стили */
 * {
@@ -84,12 +85,14 @@ body {
     transition: background-color var(--transition), color var(--transition); /* Для плавного переключения темы */
 }
 
-/* Блок page */
+/* Блок page - делаем flex для динамичного футера */
 .page {
     max-width: 1200px;
     margin: 0 auto;
     background: var(--color-white);
     min-height: 100vh;
+    display: flex; /* Добавлено */
+    flex-direction: column; /* Добавлено */
     transition: background-color var(--transition); /* Для плавного переключения темы */
 }
 
@@ -141,9 +144,10 @@ body {
     font-weight: var(--font-weight-bold);
 }
 
-/* Блок main */
+/* Блок main - растягиваем, чтобы футер ушёл вниз */
 .main {
     padding: var(--space-lg);
+    flex: 1 0 auto; /* Добавлено: растягиваем на доступное пространство */
 }
 
 /* Блок profile */
@@ -293,14 +297,15 @@ body {
     transition: color var(--transition);
 }
 
-/* Блок footer */
+/* Блок footer - теперь прижат к низу */
 .footer {
     background: var(--color-main);
     color: var(--color-white);
     text-align: center;
     padding: var(--space-md);
-    margin-top: var(--space-lg);
+    /* margin-top: var(--space-lg); Убрано, так как flex делает это автоматически */
     transition: background-color var(--transition);
+    /* flex-shrink: 0; Не обязательно, так как flex: 1 0 auto выше защищает */
 }
 
 /* Адаптивность */
@@ -539,4 +544,33 @@ body {
 .theme-toggle:hover {
     transform: scale(1.1);
     background: var(--color-main);
+}
+
+/* Стили для модального окна в contacts.html */
+/* dialog::backdrop и dialog стили остаются без изменений, центрирование встроено */
+/* .modal-header, .modal-content, .form-group, .modal-actions, .btn, .btn-primary, .btn-secondary, .required, @keyframes, @media для модального окна остаются без изменений */
+/* Добавим центрирование кнопки "Связаться с нами" */
+.contacts-container {
+    display: flex; /* Добавлено для центрирования кнопки */
+    flex-direction: column; /* Добавлено для правильного потока */
+    align-items: center; /* Добавлено для центрирования по горизонтали */
+    gap: var(--space-md); /* Добавлено для отступа между контактами и кнопкой */
+}
+/* Убираем стили, которые были для .contact-button в старом CSS, если они мешают */
+.contact-button {
+    /* Если были стили для .contact-button из ПЗ 9, их нужно заменить или уточнить */
+    /* Предположим, мы хотим использовать общий стиль кнопки */
+    /* padding: 15px 40px; font-size: 16px; border-radius: 30px; cursor: pointer; margin-top: 20px; font-weight: 600; transition: all 0.3s ease; */
+    /* background: linear-gradient(135deg,#667eea 0%,#764ba2 100%); */
+    /* color: white; border: none; */
+    /* transform: translateY(-2px); box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4); */
+    /* Эти стили конфликтуют с .btn, лучше использовать .btn и модификатор */
+    /* Пусть кнопка будет как .btn.btn-primary */
+    /* padding: 0.75rem 1.5rem; border: none; border-radius: 6px; cursor: pointer; font-size: 1rem; transition: all 0.3s ease; font-weight: 600; background: linear-gradient(135deg,#667eea 0%,#764ba2 100%); color: white; */
+    /* transform: translateY(-2px); box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4); */
+    /* Это дублирует .btn-primary */
+    /* Просто убедимся, что она центрирована и использует общий стиль */
+    /* align-self: center; уже не нужно, так как родитель .contacts-container центрирует */
+    /* margin-top: var(--space-md); может быть не нужен, если gap в родителе */
+    /* margin-top: var(--space-md); */
 }

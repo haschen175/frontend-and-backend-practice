@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Товары</title>
+    <link rel="stylesheet" href="../style/style.css">
+</head>
+<body>
+    <div class="page">
+        <header class="header">
+            <h1 class="header__title">Моё портфолио</h1>
+        </header>
+        <nav class="nav">
+            <ul class="nav__list">
+                <li class="nav__item">
+                    <a class="nav__link" href="../index.html">Главная</a>
+                </li>
+                <li class="nav__item">
+                    <a class="nav__link" href="news.html">Новости</a>
+                </li>
+                <li class="nav__item nav__item--active">
+                    <a class="nav__link" href="goods.html">Товары</a>
+                </li>
+                <li class="nav__item">
+                    <a class="nav__link" href="practices.html">Практики</a>
+                </li>
+                <li class="nav__item">
+                    <a class="nav__link" href="contacts.html">Контакты</a>
+                </li>
+            </ul>
+        </nav>
+        <main class="main">
+            <section class="goods">
+                <h2 class="goods__title">Каталог товаров</h2>
+                <div class="goods__grid">
+                    <div class="product-card">
+                        <img class="product-card__image" src="../images/goods1.jpg" alt="Товар 1">
+                        <h3 class="product-card__name">сумка</h3>
+                        <p class="product-card__price">1000 руб.</p>
+                    </div>
+                    <div class="product-card product-card--selected"> <!-- Пример состояния "выбрано" -->
+                        <img class="product-card__image" src="../images/goods2.jpg" alt="Товар 2">
+                        <h3 class="product-card__name">сода (популярно!!)</h3>
+                        <p class="product-card__price">2500 руб.</p>
+                    </div>
+                    <div class="product-card product-card--discount"> <!-- Пример состояния "со скидкой" -->
+                        <img class="product-card__image" src="../images/goods3.jpg" alt="Товар 3">
+                        <h3 class="product-card__name">реклама (со скидкой)</h3>
+                        <p class="product-card__price">500 руб.</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer class="footer">
+            <p class="footer__text">&copy; 2025 Мой сайт</p>
+        </footer>
+    </div>
+    <!-- Кнопка переключения темы -->
+    <button class="theme-toggle" id="themeToggle" aria-label="Переключить тему">🌙</button>
+
+    <script>
+        // Функция переключения темы
+        function toggleTheme() {
+            const htmlElement = document.documentElement;
+            const currentTheme = htmlElement.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            htmlElement.setAttribute('data-theme', newTheme);
+
+            // Сохраняем предпочтение пользователя в localStorage
+            localStorage.setItem('theme', newTheme);
+
+            // Обновляем иконку кнопки
+            const themeToggleBtn = document.getElementById('themeToggle');
+            themeToggleBtn.textContent = newTheme === 'dark' ? '☀️' : '🌙';
+            themeToggleBtn.setAttribute('aria-label', `Текущая тема: ${newTheme === 'dark' ? 'Тёмная' : 'Светлая'}`);
+        }
+
+        // Инициализация темы при загрузке страницы
+        document.addEventListener('DOMContentLoaded', function() {
+            const savedTheme = localStorage.getItem('theme') || 'light'; // По умолчанию светлая
+            document.documentElement.setAttribute('data-theme', savedTheme);
+
+            // Обновляем иконку кнопки при загрузке
+            const themeToggleBtn = document.getElementById('themeToggle');
+            themeToggleBtn.textContent = savedTheme === 'dark' ? '☀️' : '🌙';
+            themeToggleBtn.setAttribute('aria-label', `Текущая тема: ${savedTheme === 'dark' ? 'Тёмная' : 'Светлая'}`);
+
+            // Добавляем обработчик события на кнопку
+            themeToggleBtn.addEventListener('click', toggleTheme);
+        });
+    </script>
+</body>
+</html>
