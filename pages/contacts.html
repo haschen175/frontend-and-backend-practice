@@ -5,171 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Контакты</title>
     <link rel="stylesheet" href="../style/style.css">
-    <style>
-        /* Стили для модального окна (взяты из ПЗ №10, адаптированы под переменные) */
-        dialog::backdrop {
-            background: rgba(0, 0, 0, 0.6);
-            animation: fadeIn 0.3s ease;
-        }
-
-        dialog {
-            border: none;
-            border-radius: var(--radius-card);
-            padding: 0;
-            box-shadow: var(--shadow-modal);
-            animation: slideIn 0.3s ease;
-            max-width: 500px;
-            width: 90vw;
-            max-height: 90vh;
-            overflow-y: auto;
-        }
-
-        .modal-header {
-            background: linear-gradient(135deg, var(--color-main) 0%, var(--color-dark) 100%);
-            color: var(--color-white);
-            padding: 1.5rem;
-            border-radius: var(--radius-card) var(--radius-card) 0 0;
-            margin: 0;
-        }
-
-        .modal-header h2 {
-            margin: 0;
-            color: var(--color-white);
-            font-size: var(--font-size-xl);
-        }
-
-        .modal-content {
-            padding: 2rem;
-        }
-
-        .form-group {
-            margin-bottom: 1.5rem;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 0.5rem;
-            font-weight: var(--font-weight-bold);
-            color: var(--color-main);
-        }
-
-        .form-group input,
-        .form-group select,
-        .form-group textarea {
-            width: 100%;
-            padding: 0.75rem;
-            border: 2px solid var(--color-light);
-            border-radius: var(--radius);
-            font-size: var(--font-size-base);
-            transition: var(--transition-color);
-            box-sizing: border-box;
-        }
-
-        .form-group input:focus,
-        .form-group select:focus,
-        .form-group textarea:focus {
-            outline: none;
-            border-color: var(--color-accent);
-        }
-
-        .form-group textarea {
-            min-height: 100px;
-            resize: vertical;
-        }
-
-        .modal-actions {
-            display: flex;
-            gap: 1rem;
-            justify-content: flex-end;
-            margin-top: 2rem;
-        }
-
-        .btn {
-            padding: 0.75rem 1.5rem;
-            border: none;
-            border-radius: var(--radius-btn);
-            cursor: pointer;
-            font-size: var(--font-size-base);
-            transition: var(--transition);
-            font-weight: var(--font-weight-bold);
-        }
-
-        .btn-primary {
-            background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-main) 100%);
-            color: var(--color-white);
-        }
-
-        .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: var(--shadow-hover);
-        }
-
-        .btn-secondary {
-            background: var(--color-light);
-            color: var(--color-main);
-            border: 2px solid var(--color-light);
-        }
-
-        .btn-secondary:hover {
-            background: var(--color-gray);
-        }
-
-        .required {
-            color: var(--color-error);
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-
-        @keyframes slideIn {
-            from {
-                opacity: 0;
-                transform: translateY(-50px) scale(0.9);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0) scale(1);
-            }
-        }
-
-        /* Адаптивность */
-        @media (max-width: 600px) {
-            dialog {
-                margin: 1rem;
-                width: calc(100vw - 2rem);
-            }
-            .modal-actions {
-                flex-direction: column;
-            }
-            .btn {
-                width: 100%;
-            }
-        }
-    </style>
 </head>
 <body>
     <div class="page">
         <header class="header">
             <h1 class="header__title">Моё портфолио</h1>
         </header>
-        <nav class="nav">
+        <nav class="nav" aria-label="Основная навигация"> <!-- Добавлен aria-label -->
             <ul class="nav__list">
                 <li class="nav__item">
-                    <a class="nav__link" href="../index.html">Главная</a>
+                    <a class="nav__link" href="../index_v1.html">Главная</a>
                 </li>
                 <li class="nav__item">
                     <a class="nav__link" href="news.html">Новости</a>
                 </li>
                 <li class="nav__item">
-                    <a class="nav__link" href="goods.html">Товары</a>
+                    <a class="nav__link" href="goods_v1.html">Товары</a>
                 </li>
                 <li class="nav__item">
                     <a class="nav__link" href="practices.html">Практики</a>
                 </li>
                 <li class="nav__item nav__item--active">
-                    <a class="nav__link" href="contacts.html">Контакты</a>
+                    <a class="nav__link" href="contacts.html" aria-current="page">Контакты</a> <!-- Добавлен aria-current -->
                 </li>
             </ul>
         </nav>
@@ -181,11 +38,11 @@
                     <div class="contacts__list">
                         <div class="contact-item">
                             <h3 class="contact-item__title">Электронная почта</h3>
-                            <p class="contact-item__value">myemail@example.com</p>
+                            <p class="contact-item__value">stoyanov.a.d@edu.mirea.ru</p>
                         </div>
                         <div class="contact-item">
                             <h3 class="contact-item__title">Физический адрес</h3>
-                            <p class="contact-item__value">г. Москва, ул. Пушкина, д. Колотушкина</p>
+                            <p class="contact-item__value">г. Москва, ул. Сталеваров, д. 14</p>
                         </div>
                         <div class="contact-item">
                             <h3 class="contact-item__title">Телефон</h3>
@@ -202,7 +59,7 @@
                     </div>
                 </section>
                 <!-- Измененная кнопка для открытия модального окна, теперь она центрирована благодаря .contacts-container -->
-                <button class="btn btn-primary" onclick="contactModal.showModal()">Связаться с нами</button>
+                <button class="btn btn-primary" onclick="openContactModal()">Связаться с нами</button>
             </section>
         </main>
         <footer class="footer">
@@ -210,48 +67,57 @@
         </footer>
 
         <!-- Модальное окно для формы обратной связи -->
-        <dialog id="contactModal">
-            <div class="modal-header">
-                <h2>Форма обратной связи</h2>
-            </div>
-            <div class="modal-content">
-                <!-- УБРАНО: method="dialog" из формы -->
-                <form id="feedbackForm">
-                    <div class="form-group">
-                        <label for="name">Имя<span class="required">*</span></label>
-                        <input type="text" id="name" name="name" required placeholder="Введите ваше имя">
-                    </div>
-                    <div class="form-group">
-                        <label for="phone">Телефон<span class="required">*</span></label>
-                        <input type="tel" id="phone" name="phone" required placeholder="+7(XXX) XXX-XX-XX">
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Электронная почта<span class="required">*</span></label>
-                        <input type="email" id="email" name="email" required placeholder="example@mail.ru">
-                    </div>
-                    <div class="form-group">
-                        <label for="category">Категория обращения<span class="required">*</span></label>
-                        <select id="category" name="category" required>
-                            <option value="">Выберите категорию</option>
-                            <option value="technical">Техническая поддержка</option>
-                            <option value="commercial">Коммерческое предложение</option>
-                            <option value="cooperation">Сотрудничество</option>
-                            <option value="complaint">Жалоба</option>
-                            <option value="suggestion">Предложение</option>
-                            <option value="other">Другое</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Текст обращения<span class="required">*</span></label>
-                        <textarea id="message" name="message" required placeholder="Опишите вашу проблему или вопрос..."></textarea>
-                    </div>
-                    <div class="modal-actions">
-                        <!-- ИЗМЕНЕНО: type="submit" -> type="button", добавлен onclick -->
-                        <button type="button" class="btn btn-secondary" onclick="cancelForm()">Отмена</button>
-                        <!-- Кнопка отправки с обработкой через JavaScript -->
-                        <button type="button" class="btn btn-primary" onclick="submitForm()">Отправить</button>
-                    </div>
-                </form>
+        <!-- role="dialog", aria-modal, aria-labelledby, tabindex добавлены для доступности -->
+        <dialog id="contactModal" role="dialog" aria-modal="true" aria-labelledby="modal-title" tabindex="-1">
+            <!-- Оверлей (фон) -->
+            <div class="modal-overlay" onclick="closeContactModal()" aria-hidden="true"></div>
+            <div class="modal-content-wrapper"> <!-- Обёртка для позиционирования -->
+                <div class="modal-header">
+                    <h2 id="modal-title">Форма обратной связи</h2>
+                    <!-- Кнопка закрытия -->
+                    <button class="btn btn-secondary" id="closeModalBtn" onclick="closeContactModal()" aria-label="Закрыть форму">
+                        &times; <!-- Символ закрытия -->
+                    </button>
+                </div>
+                <div class="modal-content">
+                    <!-- УБРАНО: method="dialog" из формы -->
+                    <form id="feedbackForm">
+                        <div class="form-group">
+                            <label for="name">Имя<span class="required">*</span></label>
+                            <input type="text" id="name" name="name" required placeholder="Введите ваше имя">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Телефон<span class="required">*</span></label>
+                            <input type="tel" id="phone" name="phone" required placeholder="+7(XXX) XXX-XX-XX">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Электронная почта<span class="required">*</span></label>
+                            <input type="email" id="email" name="email" required placeholder="example@mail.ru">
+                        </div>
+                        <div class="form-group">
+                            <label for="category">Категория обращения<span class="required">*</span></label>
+                            <select id="category" name="category" required>
+                                <option value="">Выберите категорию</option>
+                                <option value="technical">Техническая поддержка</option>
+                                <option value="commercial">Коммерческое предложение</option>
+                                <option value="cooperation">Сотрудничество</option>
+                                <option value="complaint">Жалоба</option>
+                                <option value="suggestion">Предложение</option>
+                                <option value="other">Другое</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Текст обращения<span class="required">*</span></label>
+                            <textarea id="message" name="message" required placeholder="Опишите вашу проблему или вопрос..."></textarea>
+                        </div>
+                        <div class="modal-actions">
+                            <!-- ИЗМЕНЕНО: type="submit" -> type="button", добавлен onclick -->
+                            <button type="button" class="btn btn-secondary" onclick="cancelForm()">Отмена</button>
+                            <!-- Кнопка отправки с обработкой через JavaScript -->
+                            <button type="button" class="btn btn-primary" onclick="submitForm()">Отправить</button>
+                        </div>
+                    </form>
+                </div>
             </div>
         </dialog>
     </div>
@@ -259,6 +125,25 @@
     <button class="theme-toggle" id="themeToggle" aria-label="Переключить тему">🌙</button>
 
     <script>
+        let previousActiveElement = null; // Переменная для хранения предыдущего активного элемента
+
+        // Функция для открытия модального окна
+        function openContactModal() {
+            previousActiveElement = document.activeElement; // Сохраняем текущий активный элемент
+            contactModal.showModal();
+            contactModal.focus(); // Фокус на модальное окно
+            // Также можно фокусировать первый элемент формы
+            document.getElementById('name').focus();
+        }
+
+        // Функция для закрытия модального окна
+        function closeContactModal() {
+            contactModal.close();
+            if (previousActiveElement) {
+                previousActiveElement.focus(); // Возвращаем фокус на предыдущий элемент
+            }
+        }
+
         // Функция для отправки формы
         function submitForm(){
             const form = document.getElementById('feedbackForm');
@@ -286,7 +171,7 @@
             alert('Спасибо! Ваше обращение отправлено. Мы свяжемся с вами в ближайшее время.');
 
             // Закрываем модальное окно
-            contactModal.close();
+            closeContactModal(); // Используем функцию закрытия для возврата фокуса
 
             // Очищаем форму
             form.reset();
@@ -294,19 +179,26 @@
 
         // Функция для отмены формы (закрытие модального окна)
         function cancelForm(){
-            contactModal.close();
+            closeContactModal(); // Используем функцию закрытия для возврата фокуса
             // Очищаем форму при отмене (по желанию)
             document.getElementById('feedbackForm').reset();
         }
 
-        // Закрытие модального окна по клику на фон
-        document.getElementById('contactModal').addEventListener('click', function(event){
+        // Закрытие модального окна по клику на оверлей
+        document.querySelector('.modal-overlay').addEventListener('click', function(event){
             if(event.target === this){
-                this.close();
+                closeContactModal();
             }
         });
 
-        // Обработка отправки формы через Enter (предотвращаем стандартное поведение)
+        // Обработка закрытия по клавише ESC
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape' && contactModal.open) {
+                closeContactModal();
+            }
+        });
+
+        // Обработка отправки формы через Enter (предотвращаем стандартное поведение, кроме textarea)
         document.getElementById('feedbackForm').addEventListener('keypress', function(event){
             if(event.key === 'Enter' && event.target.type !== 'textarea') {
                 event.preventDefault();

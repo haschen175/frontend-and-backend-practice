@@ -14,16 +14,16 @@
             <h1 class="header__title">Моё портфолио</h1>
         </header>
         <!-- Навигация -->
-        <nav class="nav">
+        <nav class="nav" aria-label="Основная навигация">
             <ul class="nav__list">
                 <li class="nav__item nav__item--active">
-                    <a class="nav__link" href="index.html">Главная</a>
+                    <a class="nav__link" href="index.html" aria-current="page">Главная</a>
                 </li>
                 <li class="nav__item">
                     <a class="nav__link" href="pages/news.html">Новости</a>
                 </li>
                 <li class="nav__item">
-                    <a class="nav__link" href="pages/goods.html">Товары</a>
+                    <a class="nav__link" href="pages/goods_v1.html">Товары</a>
                 </li>
                 <li class="nav__item">
                     <a class="nav__link" href="pages/practices.html">Практики</a>
@@ -38,10 +38,10 @@
             <!-- Профиль -->
             <section class="profile">
                 <div class="profile__card">
-                    <img class="profile__photo" src="images/photo.jpg" alt="Фото">
+                    <img class="profile__photo" src="images/photo.png" alt="Фото">
                     <div class="profile__info">
-                        <h2 class="profile__name">Стоянов Антон Дмитриевич</h2>
-                        <p class="profile__group">ЭФБО-13-24</p>
+                        <h2 class="profile__name">ВАШЕ ИМЯ</h2>
+                        <p class="profile__group">ВАША ГРУППА</p>
                     </div>
                 </div>
             </section>
@@ -50,7 +50,7 @@
                 <h2 class="about__title">Обо мне</h2>
                 <div class="about__content">
                     <p class="about__text">
-                        Родился в Москве в 2006 году. Обучаюсь в РТУ МИРЭА.
+                        ВАШ ТЕКСТ ОБО МНЕ.
                     </p>
                 </div>
             </section>
@@ -67,7 +67,6 @@
                     <div class="skill skill--js">
                         <span class="skill__name">JavaScript</span>
                     </div>
-                    <!-- Добавьте другие навыки по необходимости, используя модификаторы -->
                     <div class="skill skill--python">
                         <span class="skill__name">Python</span>
                     </div>
@@ -85,21 +84,18 @@
                         <h3 class="project-card__title">Todo приложение</h3>
                         <p class="project-card__desc">Простое приложение для задач</p>
                     </div>
-                    <!-- Добавьте другие проекты по необходимости -->
                     <div class="project-card">
-                        <h3 class="project-card__title">Скрипты</h3>
-                        <p class="project-card__desc">Писал простейшие скрипты.</p>
+                        <h3 class="project-card__title">Игра на Canvas</h3>
+                        <p class="project-card__desc">Интерактивная браузерная игра</p>
                     </div>
                 </div>
             </section>
         </main>
         <!-- Подвал -->
         <footer class="footer">
-            <p class="footer__text">&copy; 2025 Мой сайт</p>
+            <p class="footer__text">&copy; 2024 Мой сайт</p>
         </footer>
     </div>
-        <!-- ... (ваш HTML до закрывающего </body>) ... -->
-
     <!-- Кнопка переключения темы -->
     <button class="theme-toggle" id="themeToggle" aria-label="Переключить тему">🌙</button>
 
