@@ -2,7 +2,7 @@
 :root {
     /* Цвета светлой темы */
     --color-main: #2c3e50;
-    --color-accent: #3498db;
+    --color-accent: #215d85;
     --color-light: #ecf0f1;
     --color-dark: #34495e;
     --color-text: #2c3e50;
@@ -10,10 +10,10 @@
     --color-black: #000000;
     --color-success: #2ecc71;
     --color-error: #e74c3c;
-    --color-gray: #95a5a6;
+    --color-gray: #252929;
     --color-bg-dark: #1a1a1a;
     --color-text-dark: #ecf0f1;
-    --color-accent-dark: #3498db;
+    --color-accent-dark: #133b57;
 
     /* Тени */
     --shadow: 0 2px 5px rgba(0,0,0,0.1);
@@ -142,7 +142,7 @@ body {
     background: var(--color-accent);
     outline: none; /* Стираем стандартный фокус */
     border-color: var(--color-accent); /* Устанавливаем визуальный индикатор фокуса */
-    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.3); /* Дополнительный индикатор */
+    box-shadow: 0 0 0 3px rgba(6, 38, 59, 0.3); /* Дополнительный индикатор */
 }
 
 /* Модификатор --active */
@@ -250,7 +250,7 @@ body {
 }
 
 .skill--html {
-    background: #e34c26;
+    background: #79210bcc;
 }
 
 .skill--css {
@@ -258,7 +258,7 @@ body {
 }
 
 .skill--js {
-    background: #f0db4f;
+    background: #ffe641;
     color: var(--color-text);
 }
 
