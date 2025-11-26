@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Практики</title>
+    <title>Товары</title>
     <link rel="stylesheet" href="../style/style.css">
 </head>
 <body>
@@ -19,11 +19,11 @@
                 <li class="nav__item">
                     <a class="nav__link" href="news.html">Новости</a>
                 </li>
-                <li class="nav__item">
-                    <a class="nav__link" href="goods_v1.html">Товары</a>
-                </li>
                 <li class="nav__item nav__item--active">
-                    <a class="nav__link" href="practices.html" aria-current="page">Практики</a>
+                    <a class="nav__link" href="goods_v1.html" aria-current="page">Товары</a>
+                </li>
+                <li class="nav__item">
+                    <a class="nav__link" href="practices.html">Практики</a>
                 </li>
                 <li class="nav__item">
                     <a class="nav__link" href="contacts.html">Контакты</a>
@@ -31,20 +31,23 @@
             </ul>
         </nav>
         <main class="main">
-            <section class="projects"> <!-- Используем существующий БЭМ-блок для практик -->
-                <h2 class="projects__title">Прохождение практик</h2>
-                <div class="projects__grid">
-                    <div class="project-card">
-                        <h3 class="project-card__title">Тема Практики 1</h3>
-                        <p class="project-card__desc">Описание первой практики. Здесь может быть краткое описание темы, целей и задач.</p>
+            <section class="goods">
+                <h2 class="goods__title">Каталог товаров</h2>
+                <div class="goods__grid">
+                    <div class="product-card">
+                        <img class="product-card__image" src="../images/goods1.jpg" alt="Товар 1">
+                        <h3 class="product-card__name">Товар 1</h3>
+                        <p class="product-card__price">1000 руб.</p>
                     </div>
-                    <div class="project-card">
-                        <h3 class="project-card__title">Тема Практики 2</h3>
-                        <p class="project-card__desc">Описание второй практики. Подробнее о том, что изучалось или разрабатывалось.</p>
+                    <div class="product-card product-card--selected"> <!-- Пример состояния "выбрано" -->
+                        <img class="product-card__image" src="../images/goods2.jpg" alt="Товар 2">
+                        <h3 class="product-card__name">Товар 2 (Популярный)</h3>
+                        <p class="product-card__price">2500 руб.</p>
                     </div>
-                    <div class="project-card">
-                        <h3 class="project-card__title">Тема Практики 3</h3>
-                        <p class="project-card__desc">Описание третьей практики. Результаты, выводы, использованные технологии.</p>
+                    <div class="product-card product-card--discount"> <!-- Пример состояния "со скидкой" -->
+                        <img class="product-card__image" src="../images/goods3.jpg" alt="Товар 3">
+                        <h3 class="product-card__name">Товар 3 (Со скидкой)</h3>
+                        <p class="product-card__price">500 руб.</p>
                     </div>
                 </div>
             </section>
